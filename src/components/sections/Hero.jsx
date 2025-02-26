@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <main className="px-4 pt-32">
+    <main className="px-4 pt-32 flex justify-center items-center" >
       <div className="flex flex-col gap-4 max-w-4xl">
         <p className="text-[#64ffda] font-mono">Hi, my name is</p>
         <h1 className="text-7xl font-bold text-slate-200">Justin.</h1>
@@ -16,9 +16,9 @@ const Hero = () => {
           </a>
           .
         </p>
-        <button className="text-[#64ffda] border border-[#64ffda] px-8 py-4 rounded w-fit mt-8 hover:bg-[#64ffda]/10 transition-colors">
+        {/* <button className="text-[#64ffda] border border-[#64ffda] px-8 py-4 rounded w-fit mt-8 hover:bg-[#64ffda]/10 transition-colors">
           Check out my course!
-        </button>
+        </button> */}
       </div>
     </main>
   );

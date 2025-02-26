@@ -12,8 +12,8 @@ const Link = ({
   const baseStyles = "transition-colors";
   
   const variants = {
-    primary: `text-[${colors.primary.main}] hover:underline`,
-    secondary: `text-[${colors.text.secondary}] hover:text-[${colors.primary.main}]`,
+    primary: `text-[var(--primary-color)] hover:underline`,
+    secondary: `text-[var(--secondary-color)] hover:text-[var(--primary-color)]`,
   };
 
   return (

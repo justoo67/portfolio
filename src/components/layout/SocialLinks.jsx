@@ -13,20 +13,31 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="fixed left-8 bottom-0 flex flex-col gap-6 items-center">
-      {socialIcons.map((icon, index) => (
-        <a
-          key={index}
-          href={icon.href}
-          className="text-slate-400 hover:text-[#64ffda] transition-colors"
-        >
-          <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d={icon.path} />
-          </svg>
-        </a>
-      ))}
-      <div className="h-24 w-[1px] bg-slate-400"></div>
-    </div>
+    <>
+      <div class="hidden md:block">
+        <div className="fixed left-8 bottom-0 flex flex-col gap-6 items-center">
+          {socialIcons.map((icon, index) => (
+            <a
+              key={index}
+              href={icon.href}
+              className="text-slate-400 hover:text-[#64ffda] transition-colors"
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d={icon.path} />
+              </svg>
+            </a>
+          ))}
+          <div className="h-24 w-[1px] bg-slate-400"></div>
+        </div>
+
+        <div className="fixed right-8 bottom-0 flex flex-col gap-18 items-center">
+          <a href="mailto:636justin@gmail.com" className=" transform rotate-90 text-slate-400 hover:text-[#64ffda] transition-colors ">636justin@gmail.com</a>
+
+          <div className="h-24 w-[1px] bg-slate-400"></div>
+        </div>
+      </div>
+    </>
+
   );
 };
 
