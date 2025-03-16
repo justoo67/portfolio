@@ -1,4 +1,5 @@
 import React from 'react';
+import Resume from '../assets/Resume.pdf';
 
 const Navbar = () => {
   const navLinks = [
@@ -10,8 +11,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full p-4 flex justify-between items-center">
-      <div className="text-[#64ffda]">
-        <div className="h-12 w-12 border-2 border-[#64ffda] flex items-center justify-center rounded-lg">
+      <div className="text-[#1F7D53]">
+        <div className="h-12 w-12 border-2 border-[#1F7D53] flex items-center justify-center rounded-lg">
           <span className="text-2xl font-bold">JK</span>
         </div>
       </div>
@@ -21,12 +22,12 @@ const Navbar = () => {
           <a
             key={link.id}
             href={link.href}
-            className="text-[#64ffda] hover:text-white transition-colors"
+            className="text-[#1F7D53] hover:text-white transition-colors"
           >
             <span className="text-sm">{link.id}.</span> {link.label}
           </a>
         ))}
-        <button className="border border-[#64ffda] text-[#64ffda] px-4 py-2 rounded hover:bg-[#64ffda]/10 transition-colors">
+        <button className="border border-[#1F7D53] text-[#1F7D53] px-4 py-2 rounded hover:bg-[#1F7D53]/10 transition-colors" href="Resume">
           Resume
         </button>
       </div>
