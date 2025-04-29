@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from '../../assets/resume.pdf';
 
 const Hero = () => {
   return (
@@ -16,9 +17,14 @@ const Hero = () => {
           </a>
           .
         </p>
-        {/* <button className="text-[#1F7D53] border border-[#1F7D53] px-8 py-4 rounded w-fit mt-8 hover:bg-[#1F7D53]/10 transition-colors">
-          Check out my course!
-        </button> */}
+        <a 
+          href={resume} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[#1F7D53] border border-[#1F7D53] px-8 py-4 rounded w-fit mt-8 hover:bg-[#1F7D53]/10 transition-colors"
+        >
+          View Resume
+        </a>
       </div>
     </main>
   );

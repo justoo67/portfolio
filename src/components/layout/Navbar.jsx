@@ -1,5 +1,5 @@
 import React from 'react';
-// import Resume from '../assets/Resume.pdf';
+import resume from '../../assets/resume.pdf';
 
 const Navbar = () => {
   const navLinks = [
@@ -27,9 +27,14 @@ const Navbar = () => {
             <span className="text-sm">{link.id}.</span> {link.label}
           </a>
         ))}
-        <button className="border border-[#1F7D53] text-[#1F7D53] px-4 py-2 rounded hover:bg-[#1F7D53]/10 transition-colors" href="Resume">
+        <a 
+          href={resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border border-[#1F7D53] text-[#1F7D53] px-4 py-2 rounded hover:bg-[#1F7D53]/10 transition-colors"
+        >
           Resume
-        </button>
+        </a>
       </div>
     </nav>
   );
