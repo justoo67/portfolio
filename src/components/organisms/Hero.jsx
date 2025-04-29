@@ -70,16 +70,7 @@ const Hero = () => {
         >
           <p className="text-slate-400 text-lg mb-8">
             I'm a software engineer specializing in building (and occasionally designing) 
-            exceptional digital experiences. Currently, I'm focused on building accessible, 
-            human-centered products at{' '}
-            <a 
-              href="#" 
-              className="text-[#1F7D53] hover:underline relative group"
-            >
-              Upstatement
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#1F7D53] group-hover:w-full transition-all duration-300"></span>
-            </a>
-            .
+            exceptional digital experiences. 
           </p>
           
           <motion.div 

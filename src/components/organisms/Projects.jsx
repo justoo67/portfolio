@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { portfolioScreenshot } from '@/assets';
+import { portfolioScreenshot, nillaveeScreenshot } from '@/assets';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -20,16 +20,16 @@ const Projects = () => {
       title: 'Nillavee Website Clone',
       description: 'A clone of the Nillavee website built with React and styled with CSS.',
       technologies: ['React', 'CSS', 'JavaScript'],
-      image: './assets/nillavee-screenshot.jpg',
-      liveLink: '#',
-      githubLink: '#'
+      image: nillaveeScreenshot,
+      liveLink: 'https://nillaveewebsiteclone.netlify.app/',
+      githubLink: 'https://github.com/justoo67/pinkies'
     },
     {
       id: 3,
       title: 'E-commerce Platform',
       description: 'A full-stack e-commerce platform with user authentication and payment integration.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: './assets/ecommerce-screenshot.jpg',
+      image: portfolioScreenshot,
       liveLink: '#',
       githubLink: '#'
     }
