@@ -1,4 +1,5 @@
 import React from 'react'
+import { profile } from '@/assets'
 
 const About = () => {
   return (
@@ -31,7 +32,7 @@ const About = () => {
         <div className="relative w-64 h-64 group">
           <div className="absolute inset-0 bg-[#1F7D53] rounded opacity-20 group-hover:opacity-0 transition-opacity"></div>
           <img
-            src="./assets/profile.jpg"
+            src={profile}
             alt="Profile"
             className="rounded grayscale group-hover:grayscale-0 transition-all"
           />

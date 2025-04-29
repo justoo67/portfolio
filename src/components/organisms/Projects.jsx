@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { portfolioScreenshot } from '@/assets';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -9,8 +11,8 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'A personal portfolio website built with React and Tailwind CSS to showcase my projects and skills.',
       technologies: ['React', 'Tailwind CSS', 'Vite'],
-      image: './assets/portfolio-screenshot.png',
-      liveLink: 'https://justoo67.github.io/portfolio/',
+      image: portfolioScreenshot,
+      liveLink: 'https://justinkiplangat.netlify.app/',
       githubLink: 'https://github.com/justoo67/portfolio'
     },
     {
@@ -39,6 +41,60 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.technologies.includes(filter));
 
+  const ProjectCard = ({ project }) => (
+    <div className="group relative bg-[#112240] rounded-lg overflow-hidden hover:transform hover:translate-y-[-5px] transition-all duration-300">
+      <div className="relative h-48 overflow-hidden">
+        <div className="absolute inset-0 bg-[#1F7D53]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+          onError={(e) => {
+            e.target.src = 'https://via.placeholder.com/400x200?text=Project+Screenshot';
+          }}
+        />
+      </div>
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-bold text-slate-200 group-hover:text-[#1F7D53] transition-colors">
+            {project.title}
+          </h3>
+          <div className="flex gap-4">
+            <a 
+              href={project.githubLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-[#1F7D53] transition-colors"
+              aria-label="GitHub Repository"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a 
+              href={project.liveLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-[#1F7D53] transition-colors"
+              aria-label="Live Demo"
+            >
+              <FaExternalLinkAlt size={18} />
+            </a>
+          </div>
+        </div>
+        <p className="text-slate-400 mb-4 text-sm leading-relaxed">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map(tech => (
+            <span 
+              key={tech} 
+              className="text-xs font-mono text-[#1F7D53] bg-[#1F7D53]/10 px-2 py-1 rounded"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section id="projects" className="px-4 py-24">
       <div className="max-w-6xl mx-auto">
@@ -55,7 +111,7 @@ const Projects = () => {
             <button
               key={tech}
               onClick={() => setFilter(tech)}
-              className={`px-4 py-2 rounded ${
+              className={`px-4 py-2 rounded text-sm font-mono ${
                 filter === tech 
                   ? 'bg-[#1F7D53] text-white' 
                   : 'bg-transparent border border-[#1F7D53] text-[#1F7D53] hover:bg-[#1F7D53]/10'
@@ -69,53 +125,7 @@ const Projects = () => {
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map(project => (
-            <div 
-              key={project.id} 
-              className="bg-[#112240] rounded-lg overflow-hidden hover:transform hover:translate-y-[-5px] transition-transform duration-300"
-            >
-              <div className="h-48 bg-gray-700 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/400x200?text=Project+Screenshot';
-                  }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-200 mb-2">{project.title}</h3>
-                <p className="text-slate-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map(tech => (
-                    <span 
-                      key={tech} 
-                      className="text-xs text-[#1F7D53] bg-[#1F7D53]/10 px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  <a 
-                    href={project.liveLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-[#1F7D53] hover:text-white transition-colors"
-                  >
-                    Live Demo
-                  </a>
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-[#1F7D53] hover:text-white transition-colors"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
