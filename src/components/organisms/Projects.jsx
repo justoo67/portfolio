@@ -106,7 +106,7 @@ const Projects = () => {
         </p>
 
         {/* Filter buttons */}
-        <div className="flex flex-wrap gap-2 mb-12">
+        {/* <div className="flex flex-wrap gap-2 mb-12">
           {allTechnologies.map(tech => (
             <button
               key={tech}
@@ -120,7 +120,7 @@ const Projects = () => {
               {tech.charAt(0).toUpperCase() + tech.slice(1)}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -20,7 +20,7 @@ const About = () => {
             <p>Here are a few technologies I've been working with recently:</p>
 
             <ul className="grid grid-cols-2 gap-2 mt-4">
-              {['JavaScript', 'React', 'Node.js', 'TypeScript', 'WordPress', 'python'].map((tech) => (
+              {['JavaScript', 'React', 'Node.js', 'TypeScript', 'Next.js', 'python'].map((tech) => (
                 <li key={tech} className="flex items-center gap-2">
                   <span className="text-[#1F7D53]">▹</span> {tech}
                 </li>

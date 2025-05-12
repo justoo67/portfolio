@@ -8,42 +8,38 @@ const Skills = () => {
       icon: <FaCode className="text-[#1F7D53] text-2xl" />,
       skills: [
         'React.js',
-        'JavaScript (ES6+)',
+        'JavaScript',
         'TypeScript',
-        'HTML5 & CSS3',
+        'HTML & CSS',
         'Tailwind CSS',
         'Responsive Design'
       ]
     },
-    {
-      title: 'Backend Development',
-      icon: <FaDatabase className="text-[#1F7D53] text-2xl" />,
-      skills: [
-        'Node.js',
-        'Express.js',
-        'RESTful APIs',
-        'MongoDB',
-        'SQL',
-        'Authentication & Authorization'
-      ]
-    },
+    // {
+    //   title: 'Backend Development',
+    //   icon: <FaDatabase className="text-[#1F7D53] text-2xl" />,
+    //   skills: [
+    //     'Node.js',
+    //     'Express.js',
+    //     'RESTful APIs',
+    //     'MongoDB',
+    //     'SQL',
+    //     'Authentication & Authorization'
+    //   ]
+    // },
     {
       title: 'Tools & Technologies',
       icon: <FaTools className="text-[#1F7D53] text-2xl" />,
       skills: [
         'Git & GitHub',
         'VS Code',
-        'npm/yarn',
-        'Docker',
-        'AWS',
-        'CI/CD'
+        'npm/yarn'
       ]
     },
     {
       title: 'Other Skills',
       icon: <FaMobile className="text-[#1F7D53] text-2xl" />,
       skills: [
-        'Mobile App Development',
         'WordPress',
         'Python',
         'Problem Solving',

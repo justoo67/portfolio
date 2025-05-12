@@ -54,7 +54,7 @@ const Hero = () => {
           className="text-4xl sm:text-7xl font-bold text-slate-200 mb-4"
           variants={fadeInUp}
         >
-          Justin Kirui.
+          Justin Kiplangat.
         </motion.h1>
         
         <motion.h2 
